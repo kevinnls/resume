@@ -5,7 +5,6 @@ services:
       TZ: ${TZ:-}
     volumes:
       - ./:/src/site
-      - gems:/usr/local/bundle
     ports:
       - "${docker_port:-4000}:4000"
       - 35942:35942
@@ -16,5 +15,3 @@ services:
       --livereload
       --livereload-port 35942
       --baseurl '/'
-volumes:
-  gems:
