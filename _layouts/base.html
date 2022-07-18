@@ -1,0 +1,38 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<link rel="preload" href="{{- '/assets/css/layout.css' | relative_url -}}" as="style">
+	<meta charset="utf-8">
+	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
+	<style>
+	    * {
+		box-sizing: border-box;
+	    }
+	    html {
+		color-scheme: dark light;
+		scroll-behaviour: smooth;
+	    }
+	    body {
+		height: 100vh;
+		height: 100dvh;
+		width: 100vw;
+		width: 100dvw;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0px;
+	    }
+	    main {
+		width: clamp(50%, 450px, 90%);
+	    }
+	</style>
+	<link rel="stylesheet" href="{{- '/assets/css/layout.css' | relative_url -}}">
+    </head>
+    <body>
+	{{ content }}
+    </body>
+</html>
