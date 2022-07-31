@@ -7,7 +7,9 @@ url: "https://resume.kevinnlsamuel.com"
 twitter_username: kevinnlsamuel
 github_username:  kevinnls
 
+
 # Build settings
+incremental: true
 markdown: kramdown
 theme: null
 plugins:
