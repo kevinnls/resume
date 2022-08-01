@@ -40,9 +40,12 @@ header {
 .experience {
   margin: 1.5em 0px;
 }
+.employer-info a {
+  text-decoration: none;
+}
 
 h3.period {
-  color: hsla(0, 0%, 95%, 0.5);
+  color: hsla(0, 0%, 100%, .75);
 }
 
 /* vim: set expandtab tabstop=2 shiftwidth=2: */
