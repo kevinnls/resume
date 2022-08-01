@@ -1,5 +1,8 @@
 ---
 ---
+{%-capture layout_styles-%}
+{%-include layout.css-%}
+{%-endcapture-%}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,7 +13,7 @@
 	{%endif-%}
 	<meta charset="utf-8">
 	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
-	<style>*{box-sizing:border-box;margin:0px;}:root{color-scheme:dark light;font-family:sans-serif;}html{scroll-behaviour:smooth;}body{min-height:100vh;min-height:100dvh;padding:1vh 1vw;display:grid;place-items:center;}main{width:clamp(50%,450px,90%);height:100%;}.experience{margin:1.5em 0px;}</style>
+	<style>{{-layout_styles | normalize_whitespace-}}</style>
 	<link rel="stylesheet" href="{{-'/assets/css/layout.css' | relative_url-}}">
     </head>
     <body>

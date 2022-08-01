@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+:root {
+  color-scheme: dark light;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behaviour: smooth;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 1vh 1vw;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: clamp(50%, 450px, 90%);
+  height: 100%;
+}
+
+.experience {
+  margin: 1.5em 0px;
+  background-color: hotpink;
+}
+
+header {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid hotpink;
+  font-size: 1.3em;
+  padding-top: 2em;
+}
+
+#name,
+#summary {
+  padding-bottom: 0.3em;
+}
+
+h3.period {
+  color: hsla(0, 0%, 95%, 0.5);
+}
