@@ -2,18 +2,7 @@
 layout: base
 ---
 
-{::options parse_block_html="true" /}
+<h1>{{site.title}}</h1>
+<p>{{site.description}}<p>
 
-<header>
-# Kevin Samuel
-{: id="" }
-
-</header>
-
-<main>
 {%-include work_experience.html -%}
-</main>
-
-<footer>
-</footer>
-
