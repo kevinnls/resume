@@ -1,3 +1,20 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --fg-color: hsl(0,0%,0%);
+    --bg-color: hsl(0,0%,100%);
+    --theme-light: hsl(250,100%,50%);
+    --theme-dark: hsl(250,100%,50%);
+    --theme-accent: hsl(250,100%,50%);
+  }
+}
+:root {
+  --fg-color: hsl(0,0%,100%);
+  --bg-color: hsl(0,0%,10%);
+  --theme-light: hsl(250,100%,50%);
+  --theme-dark: hsl(250,100%,50%);
+  --theme-accent: hsl(250,100%,50%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -6,6 +23,8 @@
 :root {
   color-scheme: dark light;
   font-family: sans-serif;
+  color: var(--fg-color);
+  accent-color: var(--theme-accent);
 }
 
 html {
@@ -13,6 +32,7 @@ html {
 }
 
 body {
+  background-color: var(--bg-color);
   min-height: 100vh;
   min-height: 100dvh;
   padding: 1vh 1vw;
