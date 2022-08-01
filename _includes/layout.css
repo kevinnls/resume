@@ -25,10 +25,6 @@ main {
   height: 100%;
 }
 
-.experience {
-  margin: 1.5em 0px;
-}
-
 header {
   padding-bottom: 0.5em;
   border-bottom: 1px solid hotpink;
@@ -39,6 +35,10 @@ header {
 #name,
 #summary {
   padding-bottom: 0.3em;
+}
+
+.experience {
+  margin: 1.5em 0px;
 }
 
 h3.period {
