@@ -8,9 +8,10 @@
 {%-assign exp = hash[1] -%}
 
 {%-if exp.title and exp.title != empty-%}
-<div class="work-experience">
+<div class="experience work">
 <h2>{{exp.title}}</h2>
 
+    {%-comment-%}check if array/hash{%-endcomment-%}
     {%-if exp.employer.first-%}
 	{%-if exp.employer.uri and exp.employer.name-%}
 	<h3 class="employer-info">
