@@ -10,10 +10,12 @@
 	{%endif-%}
 	<meta charset="utf-8">
 	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
-	<style>*{box-sizing:border-box;}:root{color-scheme:dark light;scroll-behaviour:smooth;font-family:sans-serif;}body{height:100vh;height:100dvh;width:100vw;display:grid;grid-template-rows:5vh 2fr 5vh;grid-template-rows:5dvh 2fr 5dvh;place-items:center;margin:0px;}main{width:clamp(50%,450px,90%);}</style>
+	<style>*{box-sizing:border-box;margin:0px;}:root{color-scheme:dark light;font-family:sans-serif;}html{scroll-behaviour:smooth;}body{min-height:100vh;min-height:100dvh;padding:1vh 1vw;display:grid;place-items:center;}main{width:clamp(50%,450px,90%);height:100%;}.experience{margin:1.5em 0px;}</style>
 	<link rel="stylesheet" href="{{-'/assets/css/layout.css' | relative_url-}}">
     </head>
     <body>
-	{{ content }}
+	<main>
+	    {{ content }}
+	</main>
     </body>
 </html>
