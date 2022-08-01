@@ -6,7 +6,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<link rel="preload" href="{{- '/assets/css/layout.css' | relative_url -}}" as="style">
 	<title>{{-site.title | default: "[SET VALUE IN _config.yml | John Doe's Resume"-}}</title>
 	{%if site.description-%}
 	<meta name="description" content="{{-site.description-}}">
@@ -14,7 +13,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
 	<style>{{-layout_styles | normalize_whitespace-}}</style>
-	<link rel="stylesheet" href="{{-'/assets/css/layout.css' | relative_url-}}">
     </head>
     <body>
 	<main>
