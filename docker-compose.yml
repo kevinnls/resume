@@ -15,3 +15,4 @@ services:
       --livereload
       --livereload-port 35942
       --baseurl '/'
+      --unpublished

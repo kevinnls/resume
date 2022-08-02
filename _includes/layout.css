@@ -1,18 +1,18 @@
 :root {
   --fg-color: hsl(0,0%,100%);
   --bg-color: hsl(0,0%,10%);
-  --theme-light: 200 100% 50%;
-  --theme-dark: 200 100% 50%;
-  --theme-accent: 200 100% 50%;
+  --theme-light: 210 55% 45%;
+  --theme-dark: 210 55% 25%;
+  --theme-accent: 200 65% 50%;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --fg-color: hsl(0,0%,0%);
     --bg-color: hsl(0,0%,100%);
-    --theme-light: 200 100% 50%;
-    --theme-dark: 200 100% 50%;
-    --theme-accent: 200 100% 50%;
+    --theme-light: 210 100% 75%;
+    --theme-dark: 210 100% 60%;
+    --theme-accent: 200 100% 70%;
   }
 }
 
