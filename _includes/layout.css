@@ -1,18 +1,18 @@
 :root {
   --fg-color: hsl(0,0%,100%);
   --bg-color: hsl(0,0%,10%);
-  --theme-light: hsl(200,100%,50%);
-  --theme-dark: hsl(200,100%,50%);
-  --theme-accent: hsl(200,100%,50%);
+  --theme-light: 200 100% 50%;
+  --theme-dark: 200 100% 50%;
+  --theme-accent: 200 100% 50%;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --fg-color: hsl(0,0%,0%);
     --bg-color: hsl(0,0%,100%);
-    --theme-light: hsl(200,100%,50%);
-    --theme-dark: hsl(200,100%,50%);
-    --theme-accent: hsl(200,100%,50%);
+    --theme-light: 200 100% 50%;
+    --theme-dark: 200 100% 50%;
+    --theme-accent: 200 100% 50%;
   }
 }
 
@@ -25,7 +25,10 @@
   color-scheme: dark light;
   font-family: sans-serif;
   color: var(--fg-color);
-  accent-color: var(--theme-accent);
+  --theme-dark-color: hsl(var(--theme-dark));
+  --theme-light-color: hsl(var(--theme-light));
+  --theme-accent-color: hsl(var(--theme-accent));
+  accent-color: var(--theme-accent-color);
 }
 
 html {
@@ -48,7 +51,7 @@ main {
 
 header {
   padding-bottom: 0.5em;
-  border-bottom: 1px solid var(--theme-accent);
+  border-bottom: 1px solid var(--theme-accent-color);
   font-size: 1.3em;
   padding-top: 2em;
 }
