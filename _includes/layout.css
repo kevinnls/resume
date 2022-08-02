@@ -48,7 +48,7 @@ main {
 
 header {
   padding-bottom: 0.5em;
-  border-bottom: 1px solid hotpink;
+  border-bottom: 1px solid var(--theme-accent);
   font-size: 1.3em;
   padding-top: 2em;
 }
@@ -66,7 +66,7 @@ header {
 }
 
 h3.period {
-  color: hsla(0, 0%, 100%, .75);
+  color: var(--fg-color);
 }
 
 /* vim: set expandtab tabstop=2 shiftwidth=2: */
