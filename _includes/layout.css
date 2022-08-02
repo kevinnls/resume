@@ -1,18 +1,19 @@
+:root {
+  --fg-color: hsl(0,0%,100%);
+  --bg-color: hsl(0,0%,10%);
+  --theme-light: hsl(200,100%,50%);
+  --theme-dark: hsl(200,100%,50%);
+  --theme-accent: hsl(200,100%,50%);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --fg-color: hsl(0,0%,0%);
     --bg-color: hsl(0,0%,100%);
-    --theme-light: hsl(250,100%,50%);
-    --theme-dark: hsl(250,100%,50%);
-    --theme-accent: hsl(250,100%,50%);
+    --theme-light: hsl(200,100%,50%);
+    --theme-dark: hsl(200,100%,50%);
+    --theme-accent: hsl(200,100%,50%);
   }
-}
-:root {
-  --fg-color: hsl(0,0%,100%);
-  --bg-color: hsl(0,0%,10%);
-  --theme-light: hsl(250,100%,50%);
-  --theme-dark: hsl(250,100%,50%);
-  --theme-accent: hsl(250,100%,50%);
 }
 
 * {
