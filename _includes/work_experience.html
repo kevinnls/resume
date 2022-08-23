@@ -4,25 +4,22 @@
 </div>
 {%-endcapture-%}
 
-{%-for hash in site.data.work_experience-%}
+{%-for hash in work_experience-%}
 {%-assign exp = hash[1] -%}
 
 {%-if exp.title and exp.title != empty-%}
 <div class="experience work">
 <h2>{{exp.title}}</h2>
 
-    {%-comment-%}check if array/hash{%-endcomment-%}
-    {%-if exp.employer.first-%}
+     {%-if exp.employer-%}
 	{%-if exp.employer.uri and exp.employer.name-%}
 	<h3 class="employer-info">
 	    <a href="{{-exp.employer.uri-}}">{{-exp.employer.name-}}</a>
 	</h3>
+	{%-elsif exp.employer-%}
+	    <h3 class="employer-info">{{-exp.employer-}}</h3>
 	{%-else-%}
 	    {{-error-}}
-	{%-endif-%}
-    {%-else-%}
-	{%-if exp.employer-%}
-	    <h3 class="employer-info">{{-exp.employer-}}</h3>
 	{%-endif-%}
     {%-endif-%}
 
