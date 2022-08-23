@@ -1,12 +1,13 @@
 services:
   dev:
-    image: node:alpine
+    image: kevinnls/node-unprivileged:alpine
+    user: 'node'
     environment:
       TZ: ${TZ:-}
-    working_dir: /src/site
+    working_dir: /app
     volumes:
-      - ./:/src/site
-      - modules:/src/site/node_modules
+      - ./:/app
+      - modules:/app/node_modules
     ports:
       - "${docker_port:-8080}:8080"
     command: >

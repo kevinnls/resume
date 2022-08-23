@@ -3,10 +3,14 @@
 PORT ?= 8080
 container_cmd = docker compose run -it --rm -p${PORT}:8080 dev
 
+build:
+	${container_cmd} npm run build
 serve:
 	docker compose up -d
 	docker compose logs -f
 
+run:
+	${container_cmd}
 init:
 	${container_cmd} npm init $(ARGS)
 install:
