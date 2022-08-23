@@ -1,4 +1,5 @@
 ---
+permalink: '/test.html'
 published: false
 layout: base
 ---
