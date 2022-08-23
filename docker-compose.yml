@@ -1,18 +1,16 @@
 services:
   dev:
-    image: ghcr.io/kevinnls/pages-gem:latest-alpine
+    image: node:alpine
     environment:
       TZ: ${TZ:-}
+    working_dir: /src/site
     volumes:
       - ./:/src/site
+      - modules:/src/site/node_modules
     ports:
-      - "${docker_port:-4000}:4000"
-      - 35942:35942
+      - "${docker_port:-8080}:8080"
     command: >
-      jekyll serve
-      --host 0.0.0.0
-      --port 4000
-      --livereload
-      --livereload-port 35942
-      --baseurl '/'
-      --unpublished
+      npm run dev
+
+volumes:
+  modules:

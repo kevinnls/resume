@@ -1,0 +1,24 @@
+{
+  "name": "resume.kevinnlsamuel.com",
+  "version": "1.0.0",
+  "description": "@kevinnlsamuel's resume",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinnls/resume.git"
+  },
+  "author": "Kevin Samuel <developer@kevinnlsamuel.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/kevinnls/resume/issues"
+  },
+  "homepage": "https://github.com/kevinnls/resume#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
+}
