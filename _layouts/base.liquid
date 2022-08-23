@@ -1,7 +1,7 @@
 ---
 ---
 {%-capture layout_styles-%}
-{%-include layout.css-%}
+{%-include 'layout.css'-%}
 {%-endcapture-%}
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@
 	{%endif-%}
 	<meta charset="utf-8">
 	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
-	<style>{{-layout_styles | normalize_whitespace-}}</style>
+	<style>{{-layout_styles | strip_newlines-}}</style>
     </head>
     <body>
 	<main>
