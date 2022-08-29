@@ -15,14 +15,14 @@
     {%-if exp.employer.first-%}
 	{%-if exp.employer.uri and exp.employer.name-%}
 	<h3 class="employer-info">
-	    <a href="{{-exp.employer.uri-}}">{{-exp.employer.name-}}</a>
+	    <a class="employer-info name" href="{{-exp.employer.uri-}}">{{-exp.employer.name-}}</a>
 	</h3>
 	{%-else-%}
 	    {{-error-}}
 	{%-endif-%}
     {%-else-%}
 	{%-if exp.employer-%}
-	    <h3 class="employer-info">{{-exp.employer-}}</h3>
+	    <h3 class="employer-info name">{{-exp.employer-}}</h3>
 	{%-endif-%}
     {%-endif-%}
 

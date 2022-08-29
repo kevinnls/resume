@@ -64,8 +64,10 @@ header {
 .experience {
   margin: 1.5em 0px;
 }
-.employer-info a {
+
+.employer-info.name {
   text-decoration: none;
+  color: var(--theme-accent-color);
 }
 
 h3.period {
