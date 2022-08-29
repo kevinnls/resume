@@ -65,8 +65,14 @@ header {
   margin: 1.5em 0px;
 }
 
-.employer-info.name {
+a:link {
   text-decoration: none;
+}
+a:link:hover {
+  text-decoration: underline;
+}
+
+.employer-info.name {
   color: var(--theme-accent-color);
 }
 
