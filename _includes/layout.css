@@ -80,4 +80,19 @@ h3.period {
   color: var(--fg-color);
 }
 
+a.employer-info.name::after {
+  background-color: var(--theme-accent-color);
+  content: '';
+  display: inline-flex;
+  box-sizing: border-box;
+  height: 10px;
+  width: 10px;
+  margin-left: .3ch;
+
+  -webkit-mask-image: url("{{-'/asset/svg/hyperlink.svg' | relative_url-}}");
+  mask-image: url("{{-'/asset/svg/hyperlink.svg' | relative_url-}}");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
 /* vim: set expandtab tabstop=2 shiftwidth=2: */
