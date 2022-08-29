@@ -5,22 +5,23 @@
     fill="none"
     viewBox="0 0 120 120"
 >
-<path stroke-width="10" d="
-    M 60 10
-    a 50 50 0 0 0 -50 50
-    a 50 50 0 0 0 50 50
-    a 50 50 0 0 0 50 -50
+<path stroke-width="12" d="
+    M 35 10
+    L 10 10
+    l 0 100
+    l 100 0
+    L 110 85
 "></path>
 
 <path d="
     M 105 15
-    L 60 60
+    l -50 50
 "></path>
 <path d="
     M 110 10
-    m -30 0
-    l 25 0
+    m -45 0
+    l 40 0
     a 5 5 0 0 1 5 5
-    l 0 25
+    l 0 40
 "></path>
 </svg>
