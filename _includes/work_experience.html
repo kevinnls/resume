@@ -7,7 +7,7 @@
 {%-for hash in site.data.work_experience-%}
 {%-assign exp = hash[1] -%}
 
-{%-if exp.title and exp.title != empty-%}
+{%-if exp.hide != true and exp.title and exp.title != empty-%}
 <div class="experience work">
 <h2>{{exp.title}}</h2>
 
