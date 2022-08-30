@@ -10,8 +10,8 @@
   :root {
     --fg-color: hsl(0,0%,0%);
     --bg-color: hsl(0,0%,100%);
-    --theme-light: 210 100% 75%;
-    --theme-dark: 210 100% 60%;
+    --theme-light: 210 100% 65%;
+    --theme-dark: 210 55% 50%;
     --theme-accent: 200 100% 70%;
   }
 }
