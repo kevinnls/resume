@@ -1,0 +1,34 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<symbol id="knls" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+		<path
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="5"
+			stroke="black" fill="none" d="
+				M 5 5
+
+				l 0 120
+				m 0 -60
+				l 40 -60
+				m -40 60
+				l 40 60
+
+				l 5 -40
+				l 0 40
+				a 7.5 40 0 0 1 15 0
+
+				c 40 -90 -20 -90 20 0
+
+				c 60 0 40 -45 20 -60
+				s -40 -60 20 -60
+			"></path>
+	</symbol>
+
+	<g>
+		<circle fill="hotpink" mask="url(#knls-mask)" r="50" cx="50" cy="50"/>
+		<mask id="knls-mask">
+			<rect width="100" height="100" fill="white" />
+			<use x="10" y="10" width="80" height="80" href="#knls"/>
+		</mask>
+	</g>
+</svg>
