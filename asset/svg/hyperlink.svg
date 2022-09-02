@@ -2,17 +2,15 @@
     stroke="black"
     stroke-width="15"
     stroke-linecap="round"
+    stroke-linejoin="round"
     fill="none"
     viewBox="0 0 120 120"
 >
 <path d="
     M 30 10
-    L 15 10
-    A 5 5 0 0 0 10 15
-    L 10 105
-    A 5 5 0 0 0 15 110
-    L 105 110
-    A 5 5 0 0 0 110 105
+    L 10 10
+    L 10 110
+    L 110 110
     L 110 90
 "></path>
 
