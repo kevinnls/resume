@@ -6,7 +6,7 @@
   --theme-accent: 200 65% 50%;
 }
 
-@media (prefers-color-scheme: light) {
+@media print , (prefers-color-scheme: light) {
   :root {
     --fg-color: hsl(0,0%,0%);
     --bg-color: hsl(0,0%,100%);
