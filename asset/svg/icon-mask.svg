@@ -12,14 +12,13 @@
 			--theme-accent: 200 100% 70%;
 		}
 	}
-	svg .mask {
+	svg .round-stroke {
 		stroke-linecap: round;
 		stroke-linejoin: round;
 	}
 	</style>
 
-	<symbol id="nl" class="mask" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg"
-		stroke-width="5" stroke="white" fill="none">
+	<symbol id="nl" class="round-stroke" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
 		<g>
 			<path d="M 40 80
 				l 5 -5
@@ -31,8 +30,7 @@
 		</g>
 	</symbol>
 
-	<symbol id="ks" class="mask" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg"
-		stroke-width="15" stroke="white" fill="none">
+	<symbol id="ks" class="round-stroke" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
 		<g>
 			<path d="M 20 5
 				l 0 120
@@ -47,10 +45,10 @@
 	</symbol>
 
 	<mask id="nl-mask">
-		<use href="#nl"/>
+		<use href="#nl" fill="none" stroke="white" stroke-width="3"/>
 	</mask>
 	<mask id="ks-mask">
-		<use href="#ks"/>
+		<use href="#ks" fill="none" stroke="white" stroke-width="10"/>
 	</mask>
 
 	<g>
