@@ -1,6 +1,7 @@
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 	<style type="text/css">
-	:root { --theme-color-accent: hsl(200,100%,70%); --theme-color-dark: hsl(210,55%,50%);}
+	rect,circle,path{--bg-color: hsl(0,0%,90%); --theme-color-dark: hsl(210,55%,50%); --theme-color-accent: hsl(200,100%,70%);}
+	@media(prefers-color-scheme: light){rect,circle,path{--bg-color: hsl(0,0%,15%); --theme-dark: 210 55% 50%; --theme-accent: 200 100% 70%;}}
 	.mask { stroke-linecap: round; stroke-linejoin: round; }
 	</style>
 
@@ -18,7 +19,7 @@
 	</symbol>
 
 	<symbol id="ks" class="mask" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg"
-		stroke-width="15" stroke="black" fill="none">
+		stroke-width="15" stroke="white" fill="none">
 		<g>
 			<path d="M 20 5
 				l 0 120
@@ -33,15 +34,15 @@
 	</symbol>
 
 	<mask id="nl-mask">
-		<rect width="100" height="100" fill="black" />
 		<use href="#nl"/>
 	</mask>
 	<mask id="ks-mask">
-		<rect width="100" height="100" fill="white" />
 		<use href="#ks"/>
 	</mask>
+
 	<g>
-		<circle fill="white" mask="url(#ks-mask)" r="50" cx="50" cy="50"/>
-		<circle fill="black" mask="url(#nl-mask)" r="50" cx="50" cy="50"/>
+		<circle fill="var(--bg-color)" r="50" cx="50" cy="50"/>
+		<circle fill="var(--theme-color-dark)" mask="url(#ks-mask)" r="50" cx="50" cy="50"/>
+		<circle fill="var(--theme-color-accent)" mask="url(#nl-mask)" r="50" cx="50" cy="50"/>
 	</g>
 </svg>
