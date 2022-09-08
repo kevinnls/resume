@@ -10,7 +10,16 @@
 	{%if site.description-%}
 	<meta name="description" content="{{-site.description-}}">
 	{%endif-%}
-	<link rel="icon" href="{{ 'asset/svg/icon-mask.svg' | relative_url }}">
+	<link media="(prefers-color-scheme: light)" rel="icon" href="{{ 'asset/svg/icon-light.svg' | relative_url }}">
+	<link media="(prefers-color-scheme: dark)" rel="icon" href="{{ 'asset/svg/icon-dark.svg' | relative_url }}">
+	<script defer>
+		if (matchMedia('(prefers-color-scheme)').matches) {
+			var ele = document.createElement('link')
+			ele.href = "{{ 'asset/svg/icon-dark.svg' | relative_url }}"
+			ele.rel = "icon"
+			document.head.appendChild(ele)
+		}
+	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
 	<style>{{-layout_styles | normalize_whitespace-}}</style>
