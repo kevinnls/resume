@@ -18,13 +18,15 @@
 	}
 	</style>
 
-	<symbol id="nl" class="round-stroke" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+	<symbol id="nl" class="round-stroke" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 		<g>
-			<path d="M 40 80
-				l 5 -5
-				l 0 20
-				a 5 20 0 0 1 10 0
-				c 40 -75 -20 -75 20 0
+			<path d="M 10 60
+				l 10 -10
+				l 0 40
+				a 15 40 0 0 1 30 0
+				"/>
+			<path d="M 50 90
+				c 75 -105 -45 -105 35 0
 				l 5 -5
 				"/>
 		</g>
@@ -45,7 +47,7 @@
 	</symbol>
 
 	<mask id="nl-mask">
-		<use width="70" height="70" x="15" y="15" href="#nl" fill="none" stroke="white" stroke-width="3"/>
+		<use width="50" height="50" x="25" y="25" href="#nl" fill="none" stroke="white" stroke-width="3"/>
 	</mask>
 	<mask id="ks-mask">
 		<use width="70" height="70" x="15" y="15" href="#ks" fill="none" stroke="white" stroke-width="10"/>
