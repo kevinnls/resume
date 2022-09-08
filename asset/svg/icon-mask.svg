@@ -8,8 +8,8 @@
 	@media print,(prefers-color-scheme: light){
 		svg {
 			--bg-color: hsl(0,0%,15%);
-			--theme-dark: 210 55% 50%;
-			--theme-accent: 200 100% 70%;
+			--theme-color-dark: 210 55% 50%;
+			--theme-acolor-ccent: 200 100% 70%;
 		}
 	}
 	svg .round-stroke {
