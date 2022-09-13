@@ -85,7 +85,7 @@ a:link:hover {
   color: var(--theme-accent-color);
 }
 
-h3.period {
+.period {
   color: var(--fg-color);
 }
 
