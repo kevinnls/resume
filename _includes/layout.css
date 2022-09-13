@@ -106,4 +106,6 @@ a:link::after {
   mask-size: cover;
 }
 
+{%comment%}
 /* vim: set expandtab tabstop=2 shiftwidth=2: */
+{%endcomment%}
