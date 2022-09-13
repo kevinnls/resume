@@ -8,5 +8,5 @@ layout: base
 <p id="summary">{{site.description}}</p>
 </header>
 
-{%-include work_experience.html -%}
+{%-include work_experience.liquid -%}
 
