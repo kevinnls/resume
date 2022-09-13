@@ -72,6 +72,8 @@ header {
 
 .experience {
   margin: 1.5em 0px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
 
 a:link {
