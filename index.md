@@ -8,5 +8,10 @@ layout: base
 <p id="summary">{{site.description}}</p>
 </header>
 
-{%-include work_experience.liquid -%}
+{%-assign experience_by_order = site.data.work_experience-%}
+{%-for hash in experience_by_order-%}
+{%-if hash[1].hide != true-%}
+{%-include work_experience.liquid hash=hash-%}
+{%-endif-%}
+{%-endfor-%}
 

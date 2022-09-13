@@ -4,19 +4,24 @@ dataerror: expected value not found in this data structure
 </div>
 {%-endcapture-%}
 
-{%-for hash in site.data.work_experience-%}
-{%-assign exp = hash[1] -%}
+{%-assign exp = include.hash[1] -%}
 
 {%-if exp.hide != true and exp.title and exp.title != empty-%}
 <div class="experience work">
+
 <div>
+
 <h2>{{exp.title}}</h2>
 
 {%-comment-%}check if array/hash{%-endcomment-%}
 {%-if exp.employer.first-%}
 {%-if exp.employer.uri and exp.employer.name-%}
 <p class="employer-info">
-<a class="employer-info name" href="{{-exp.employer.uri-}}">{{-exp.employer.name-}}</a>
+<a target="_blank"
+class="employer-info name"
+href="{{-exp.employer.uri-}}">
+{{-exp.employer.name-}}
+</a>
 </p>
 {%-else-%}
 {{-error-}}
@@ -30,7 +35,9 @@ dataerror: expected value not found in this data structure
 {%-if exp.description and exp.description != empty-%}
 <p class="description">{{-exp.description-}}</p>
 {%-endif-%}
+
 </div>
+
 {%-if exp.period and exp.period != empty-%}
 <div>
 <p class="period">{{-exp.period-}}</p>
@@ -40,4 +47,3 @@ dataerror: expected value not found in this data structure
 </div>
 {%-endif-%}
 
-{%-endfor-%}
