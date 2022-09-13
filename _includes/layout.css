@@ -89,7 +89,7 @@ a:link:hover {
   color: var(--fg-color);
 }
 
-a.employer-info.name::after {
+a:link::after {
   background-color: var(--theme-light-color);
   content: '';
   display: inline-flex;
