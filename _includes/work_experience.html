@@ -14,20 +14,20 @@
     {%-comment-%}check if array/hash{%-endcomment-%}
     {%-if exp.employer.first-%}
 	{%-if exp.employer.uri and exp.employer.name-%}
-	<h3 class="employer-info">
+	<p class="employer-info">
 	    <a class="employer-info name" href="{{-exp.employer.uri-}}">{{-exp.employer.name-}}</a>
-	</h3>
+	</p>
 	{%-else-%}
 	    {{-error-}}
 	{%-endif-%}
     {%-else-%}
 	{%-if exp.employer-%}
-	    <h3 class="employer-info name">{{-exp.employer-}}</h3>
+	    <p class="employer-info name">{{-exp.employer-}}</p>
 	{%-endif-%}
     {%-endif-%}
 
     {%-if exp.period and exp.period != empty-%}
-    <h3 class="period">{{-exp.period-}}</h3>
+    <p class="period">{{-exp.period-}}</p>
     {%-endif-%}
 
     {%-if exp.description and exp.description != empty-%}
