@@ -1,6 +1,6 @@
 {%-capture error-%}
 <div style="font-family:mono;text-align:center;padding:20px 5px;font-weight:900;background-color:red;">
-    dataerror: expected value not found in this data structure
+dataerror: expected value not found in this data structure
 </div>
 {%-endcapture-%}
 
@@ -11,28 +11,28 @@
 <div class="experience work">
 <h2>{{exp.title}}</h2>
 
-    {%-comment-%}check if array/hash{%-endcomment-%}
-    {%-if exp.employer.first-%}
-	{%-if exp.employer.uri and exp.employer.name-%}
-	<p class="employer-info">
-	    <a class="employer-info name" href="{{-exp.employer.uri-}}">{{-exp.employer.name-}}</a>
-	</p>
-	{%-else-%}
-	    {{-error-}}
-	{%-endif-%}
-    {%-else-%}
-	{%-if exp.employer-%}
-	    <p class="employer-info name">{{-exp.employer-}}</p>
-	{%-endif-%}
-    {%-endif-%}
+{%-comment-%}check if array/hash{%-endcomment-%}
+{%-if exp.employer.first-%}
+{%-if exp.employer.uri and exp.employer.name-%}
+<p class="employer-info">
+<a class="employer-info name" href="{{-exp.employer.uri-}}">{{-exp.employer.name-}}</a>
+</p>
+{%-else-%}
+{{-error-}}
+{%-endif-%}
+{%-else-%}
+{%-if exp.employer-%}
+<p class="employer-info name">{{-exp.employer-}}</p>
+{%-endif-%}
+{%-endif-%}
 
-    {%-if exp.period and exp.period != empty-%}
-    <p class="period">{{-exp.period-}}</p>
-    {%-endif-%}
+{%-if exp.period and exp.period != empty-%}
+<p class="period">{{-exp.period-}}</p>
+{%-endif-%}
 
-    {%-if exp.description and exp.description != empty-%}
-    <p class="description">{{-exp.description-}}</p>
-    {%-endif-%}
+{%-if exp.description and exp.description != empty-%}
+<p class="description">{{-exp.description-}}</p>
+{%-endif-%}
 
 </div>
 {%-endif-%}
