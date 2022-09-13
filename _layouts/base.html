@@ -13,7 +13,7 @@
 	<link media="(prefers-color-scheme: light)" rel="icon" href="{{ 'asset/svg/icon-light.svg' | relative_url }}">
 	<link media="(prefers-color-scheme: dark)" rel="icon" href="{{ 'asset/svg/icon-dark.svg' | relative_url }}">
 	<script defer>
-		if (matchMedia('(prefers-color-scheme)').matches) {
+		if (!(matchMedia('(prefers-color-scheme)').matches)) {
 			var ele = document.createElement('link')
 			ele.href = "{{ 'asset/svg/icon-dark.svg' | relative_url }}"
 			ele.rel = "icon"
