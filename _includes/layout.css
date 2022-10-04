@@ -76,8 +76,10 @@ header {
   grid-template-columns: 4fr 1fr;
 }
 
+a:visited,
 a:link {
   text-decoration: none;
+  color: var(--theme-accent-color);
 }
 a:link:hover {
   text-decoration: underline;
