@@ -9,16 +9,21 @@ dataerror: expected value not found in this data structure
 {%-if exp.hide != true and exp.title and exp.title != empty-%}
 <div class="experience work">
 
-<div>
-
 <h2>{{exp.title}}</h2>
 
+{%-if exp.period and exp.period != empty-%}
+<div>
+<p class="period">{{-exp.period-}}</p>
+</div>
+{%-endif-%}
+
+
+<div>
 {%-comment-%}check if array/hash{%-endcomment-%}
 {%-if exp.employer.first-%}
 {%-if exp.employer.uri and exp.employer.name-%}
-<p class="employer-info">
+<p class="employer-info name">
 <a target="_blank"
-class="employer-info name"
 href="{{-exp.employer.uri-}}">
 {{-exp.employer.name-}}
 </a>
@@ -37,12 +42,6 @@ href="{{-exp.employer.uri-}}">
 {%-endif-%}
 
 </div>
-
-{%-if exp.period and exp.period != empty-%}
-<div>
-<p class="period">{{-exp.period-}}</p>
-</div>
-{%-endif-%}
 
 </div>
 {%-endif-%}

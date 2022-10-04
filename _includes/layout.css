@@ -26,6 +26,7 @@
 * {
   box-sizing: border-box;
   margin: 0px;
+  padding: 0px;
 }
 
 :root {
@@ -73,7 +74,11 @@ header {
 .experience {
   margin: 1.5em 0px;
   display: grid;
+}
+@media(min-width:600px){
+  .experience {
   grid-template-columns: 4fr 1fr;
+  }
 }
 
 a:visited,
@@ -85,7 +90,8 @@ a:link:hover {
   text-decoration: underline;
 }
 
-.employer-info.name {
+.name {
+  font-size: 1.3em;
   color: var(--theme-accent-color);
 }
 
