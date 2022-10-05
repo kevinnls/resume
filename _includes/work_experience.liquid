@@ -5,9 +5,10 @@ dataerror: expected value not found in this data structure
 {%-endcapture-%}
 
 {%-assign exp = include.hash[1] -%}
+{%-assign type = include.type | default: 'work' -%}
 
 {%-if exp.hide != true and exp.title and exp.title != empty-%}
-<div class="experience work">
+<div class="experience {{type}}">
 
 <h2>{{exp.title}}</h2>
 
@@ -20,20 +21,20 @@ dataerror: expected value not found in this data structure
 
 <div>
 {%-comment-%}check if array/hash{%-endcomment-%}
-{%-if exp.employer.first-%}
-{%-if exp.employer.uri and exp.employer.name-%}
-<p class="employer-info name">
+{%-if exp.org.first-%}
+{%-if exp.org.uri and exp.org.name-%}
+<p class="org-info name">
 <a target="_blank"
-href="{{-exp.employer.uri-}}">
-{{-exp.employer.name-}}
+href="{{-exp.org.uri-}}">
+{{-exp.org.name-}}
 </a>
 </p>
 {%-else-%}
 {{-error-}}
 {%-endif-%}
 {%-else-%}
-{%-if exp.employer-%}
-<p class="employer-info name">{{-exp.employer-}}</p>
+{%-if exp.org-%}
+<p class="org-info name">{{-exp.org-}}</p>
 {%-endif-%}
 {%-endif-%}
 
