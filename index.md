@@ -11,7 +11,7 @@ layout: base
 {%-assign experience_by_order = site.data.work_experience-%}
 {%-for hash in experience_by_order-%}
 {%-if hash[1].hide != true-%}
-{%-include work_experience.liquid hash=hash type='work'-%}
+{%-include experience.liquid hash=hash type='work'-%}
 {%-endif-%}
 {%-endfor-%}
 
