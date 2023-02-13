@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+:root {
+	color-scheme: dark light;
+	font-family: sans-serif;
+}
+
+body, html { min-height: 100vh; min-height: 100dvh; }
+
+main { margin: 0 auto; width: clamp(70vw,450px,90vw); }
