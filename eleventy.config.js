@@ -5,7 +5,7 @@ const yaml = require('js-yaml');
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter(
-	  "debug", (content) => `<pre>${inspect(content)}</pre>`);
+	  "debug", (content) => `<pre>DEBUG&NewLine;${inspect(content)}</pre>`);
   eleventyConfig.addFilter(
 	  "sortbydate", sortbydate);
 
