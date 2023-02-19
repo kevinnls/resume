@@ -8,15 +8,19 @@ layout: base.liquid
 
 <main>
 	<ul>
-	{%- for x in experience -%}
-		{%- assign exp = x[1] -%}
+	{%- assign sortedexp = experience | sortbydate %}
+	{%- for exp in sortedexp -%}
 		<li>
 			<h2>{{- exp.title -}}</h2>
 			<h3>{{- exp.org.name -}}</h3>
 			<div>
-				<time datetime="{{- exp.period.from -}}" >{{- exp.period.from -}}</time>
+				<time datetime="{{- exp.period.from | isoDate -}}" >
+					{{- exp.period.from | fmtDate -}}
+				</time>
 				<span>&ndash;</span>
-				<time datetime="{{- exp.period.to -}}">{{- exp.period.from -}}</time>
+				<time datetime="{{- exp.period.to | isoDate -}}">
+					{{- exp.period.to | fmtDate -}}
+				</time>
 			</div>
 			<p>
 			{{-exp.description-}}
