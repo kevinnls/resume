@@ -13,7 +13,16 @@ layout: base.liquid
 		<li>
 			<header>
 			<h2>{{- exp.title -}}</h2>
-			<p>{{- exp.org.name -}}</p>
+			<p>
+			{%-if exp.org.uri-%}
+				<a target="_blank" link="norel"
+				href={{-exp.org.uri-}}>
+					{{- exp.org.name -}}
+				</a>
+			{%-else-%}
+				{{- exp.org.name -}}
+			{%-endif-%}
+			</p>
 			<p>
 			{%-if exp.current-%}
 				since <time datetime="{{- exp.period.from | machine_date -}}">
