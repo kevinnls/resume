@@ -1,4 +1,5 @@
 const { sortbydate } = require('./lib/sortbydate.cjs');
+const { human_date, machine_date } = require('./lib/dateformats.cjs');
 const { inspect } = require('node:util');
 const yaml = require('js-yaml');
 
@@ -9,9 +10,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter(
 	  "sortbydate", sortbydate);
   eleventyConfig.addFilter(
-	  "isoDate", (v) => (new Date(v.toString())).toISOString());
+	  "machine_date", machine_date);
   eleventyConfig.addFilter(
-	  "fmtDate", (v) => (new Date(v.toString())).toLocaleString('en-in'));
+	  "human_date", human_date);
 
   eleventyConfig.addDataExtension(
 	  "yml, yaml", c => yaml.load(c));

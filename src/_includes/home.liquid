@@ -14,12 +14,12 @@ layout: base.liquid
 			<h2>{{- exp.title -}}</h2>
 			<h3>{{- exp.org.name -}}</h3>
 			<div>
-				<time datetime="{{- exp.period.from | isoDate -}}" >
-					{{- exp.period.from | fmtDate -}}
+				<time datetime="{{- exp.period.from | machine_date -}}" >
+					{{- exp.period.from | human_date -}}
 				</time>
 				<span>&ndash;</span>
-				<time datetime="{{- exp.period.to | isoDate -}}">
-					{{- exp.period.to | fmtDate -}}
+				<time datetime="{{- exp.period.to | machine_date -}}">
+					{{- exp.period.to | human_date -}}
 				</time>
 			</div>
 			<p>
