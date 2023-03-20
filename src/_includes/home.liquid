@@ -7,12 +7,19 @@ layout: base.liquid
 </header>
 
 <main>
-	<ul>
+	<section>
+		<header><h2>About Me</h2></header>
+		<p>Hello! I am Kevin. I do things with languages.</p>
+	</section>
+	<section>
+		<header><h2>Experience</h2></header>
+	<ol>
 	{%- assign sortedexp = experience | sortbydate %}
 	{%- for exp in sortedexp -%}
 		<li>
+			<article>
 			<header>
-			<h2>{{- exp.title -}}</h2>
+			<h3>{{- exp.title -}}</h2>
 			<p>
 			{%-if exp.org.uri-%}
 				<a target="_blank" link="norel"
@@ -42,10 +49,11 @@ layout: base.liquid
 			<p>
 			{{-exp.description-}}
 			</p>
+			</article>
 		</li>
 	{%- endfor -%}
-	</ul>
-	{{- content -}}
+	</ol>
+	</section>
 </main>
 
 <footer>
