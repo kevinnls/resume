@@ -15,11 +15,11 @@ layout: base.liquid
 			<h3>{{- exp.org.name -}}</h3>
 			<div>
 				<time datetime="{{- exp.period.from | machine_date -}}" >
-					{{- exp.period.from | human_date -}}
+					{{- exp.period.from | human_date: lang -}}
 				</time>
 				<span>&ndash;</span>
 				<time datetime="{{- exp.period.to | machine_date -}}">
-					{{- exp.period.to | human_date -}}
+					{{- exp.period.to | human_date: lang -}}
 				</time>
 			</div>
 			<p>
