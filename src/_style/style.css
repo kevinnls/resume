@@ -12,4 +12,4 @@
 body, html { min-height: 100vh; min-height: 100dvh; }
 body { display: grid; grid-template-rows: max-content auto max-content; gap: 2em; padding: 1ch;}
 main { margin: 0 auto; width: clamp(70vw,450px,90vw); }
-header,footer { text-align: center; }
+body > header, body > footer { text-align: center; }

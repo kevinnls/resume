@@ -1,0 +1,11 @@
+type: education
+title: Postgraduate Degree
+current: true
+period:
+  from: 2022-11
+org:
+  name: English and Foreign Languages University
+  uri: https://efluniversity.ac.in/
+description: >
+  Pursuing French and Francophonie studies.
+  Specialising in the domains of Linguistics and Translation/Interpretation.

@@ -11,17 +11,25 @@ layout: base.liquid
 	{%- assign sortedexp = experience | sortbydate %}
 	{%- for exp in sortedexp -%}
 		<li>
+			<header>
 			<h2>{{- exp.title -}}</h2>
-			<h3>{{- exp.org.name -}}</h3>
-			<div>
+			<p>{{- exp.org.name -}}</p>
+			<p>
+			{%-if exp.current-%}
+				since <time datetime="{{- exp.period.from | machine_date -}}">
+					{{- exp.period.from | human_date: lang -}}
+				</time>
+			{%else%}
 				<time datetime="{{- exp.period.from | machine_date -}}" >
 					{{- exp.period.from | human_date: lang -}}
 				</time>
-				<span>&ndash;</span>
+				&ndash;
 				<time datetime="{{- exp.period.to | machine_date -}}">
 					{{- exp.period.to | human_date: lang -}}
 				</time>
-			</div>
+			{%-endif-%}
+			</p>
+			</header>
 			<p>
 			{{-exp.description-}}
 			</p>
